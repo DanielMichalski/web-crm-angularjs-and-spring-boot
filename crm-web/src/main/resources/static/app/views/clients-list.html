@@ -1,0 +1,112 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="flat-panel">
+
+            <div class="flat-panel-header">
+                <h4 class="flat-panel-heading">Search and filter</h4>
+            </div>
+            <div class="flat-panel-body">
+                <div class="form-horizontal">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4">
+                            <div class="form-group">
+                                <label for="filter-company-name"
+                                       class="col-sm-3 col-xs-12 control-label">Company name</label>
+
+                                <div class="col-sm-9 col-xs-12">
+                                    <input id="filter-company-name" type="text" class="form-control"
+                                           placeholder="Enter the company name">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-md-4">
+                            <div class="form-group">
+                                <label for="filter-sector"
+                                       class="col-sm-3 col-xs-12 control-label required">Company sector</label>
+
+                                <div class="col-sm-9 col-xs-12">
+                                    <select id="filter-sector" class="form-control">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-md-4">
+                            <div class="form-group">
+                                <label for="filter-manager" class="col-sm-3 col-xs-12 control-label required">Account
+                                    manager
+                                </label>
+
+                                <div class="col-sm-9 col-xs-12">
+                                    <select id="filter-manager" class="form-control">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="flat-panel">
+            <div class="flat-panel-header">
+                <h3 class="flat-panel-heading">
+                    Clients
+
+                    <a href="#" class="label label-success pull-right" title="Add new client"><i
+                            class="glyphicon glyphicon-plus"></i></a>
+                </h3>
+            </div>
+            <div class="flat-panel-body">
+                <table class="no-border table table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th class="text-center" style="width: 70px;">
+                            <span ng-click="changeOrder('id')" class="sort-btn">
+                                ID
+                                <i class="glyphicon glyphicon-chevron-up"></i>
+                            </span>
+                        </th>
+                        <th>
+                            <span ng-click="changeOrder('companyName')" class="sort-btn">
+                                Company name
+                                <i class="glyphicon glyphicon-chevron-down"></i>
+                            </span>
+                        </th>
+                        <th class="hidden-xs">
+                            <span ng-click="changeOrder('companySectorName')" class="sort-btn">
+                                Company sector
+                                <i class="glyphicon glyphicon-chevron-up"></i>
+                            </span>
+                        </th>
+                        <th class="hidden-xs">
+                            <span ng-click="changeOrder('userName')" class="sort-btn">
+                                Account manager
+                                <i class="glyphicon glyphicon-chevron-up"></i>
+                            </span>
+                        </th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody class="no-border">
+                    <tr ng-repeat="client in clients | orderBy: orderByColumn : orderByDir">
+                        <td class="text-center">{{ client.id }}</td>
+                        <td>{{ client.companyName }}</td>
+                        <td class="hidden-xs">{{ client.companySectorName }}</td>
+                        <td class="hidden-xs">{{ client.userName }}</td>
+                        <td class="text-center"><a href="#" class="label label-primary">Details</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

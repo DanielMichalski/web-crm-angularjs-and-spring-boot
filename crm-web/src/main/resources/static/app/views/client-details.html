@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>SuperCRM</title>
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,400&subset=latin-ext' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway:300,200,100' rel='stylesheet' type='text/css'>
+
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/main.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div id="outer-wrapper">
+            <div id="sidebar">
+                <div class="semifluid-layout">
+                    <div class="btn-rwd-menu">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <div class="sidebar-logo">
+                        <a href="#">Super-CRM</a>
+                    </div>
+                    <nav class="sidebar-navigation">
+                        <ul>
+                            <li class="active">
+                                <a href="#">
+                                    <i class="fa fa-users"></i>
+                                    <span>Klienci</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-database"></i>
+                                    <span>Branże</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-cogs"></i>
+                                    <span>Użytkownicy systemu</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="sidebar-copyrights">
+                        Copyright &copy; Eduweb 2015
+                    </div>
+                </div>
+            </div>
+
+            <div id="main">
+                <div class="main-header navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-xs-6 user-area">
+                                <ul class="nav navbar-nav navbar-right user-nav">
+                                    <li class="profile_menu ">
+                                        <a href="#">
+                                            <img src="../img/user-avatar.jpg" alt="Maciej Żukiewicz">
+                                            <span>Maciej Żukiewicz</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-content container-fluid">
+                    <div class="row">
+                        <div class="breadcrumb">
+                            <ul>
+                                <li>
+                                    <a href="#">Lista klientów</a>
+                                </li>
+                                <li class="active">
+                                    <span>Klient</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- content -->
+                    <div class="row top-menu">
+                        <div class="col-xs-12 clearfix">
+                            <a class="top-menu-link" href="#"><i class="fa fa-angle-double-left"></i> Powrót do listy klientów</a>
+
+                            <a href="#" class="btn btn-danger pull-right">Usuń tego klienta</a>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-danger">
+                        <strong>Ups..</strong> Taki użytkownik nie został znaleziony
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-6">
+                            <div class="flat-panel">
+                                <div class="flat-panel-header">
+                                    <h3 class="flat-panel-heading">Dodaj nowego klienta / Dane klienta</h3>
+                                </div>
+                                <div class="flat-panel-body">
+
+                                    <form class="form-horizontal">
+                                        <div class="alert alert-success">
+                                            <strong>Sukces!</strong> Dane klienta zostały zapisane!
+                                        </div>
+
+                                        <div class="alert alert-warning">
+                                            <strong>Uwaga!</strong> Popraw błędy formularza!
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="company-name" class="col-lg-2 col-sm-2 col-xs-12 control-label">Nazwa firmy</label>
+
+                                            <div class="col-lg-10 col-sm-10 col-xs-12">
+                                                <input type="text" id="company-name" class="form-control">
+
+                                                <i class="glyphicon glyphicon-asterisk"></i>
+
+                                                <span class="help-block">Nazwa firmy jest wymagana</span>
+                                                <span class="help-block">Nazwa firmy nie może być dłuższa niż 100 znaków</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="contact-name" class="col-lg-2 col-sm-2 col-xs-12 control-label required">Osoba kontaktowa</label>
+
+                                            <div class="col-lg-10 col-sm-10 col-xs-12">
+                                                <input type="text" id="contact-name" class="form-control" placeholder="Imię i nazwisko osoby kontaktowej">
+
+                                                <i class="glyphicon glyphicon-asterisk"></i>
+
+                                                <span class="help-block">Musisz podać imię i nazwisko osoby kontaktowej</span>
+                                                <span class="help-block">Imię i nazwisko nie może być dłuższe niż 50 znaków</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="contact-phone" class="col-lg-2 col-sm-2 col-xs-12 control-label required">Telefon</label>
+
+                                            <div class="col-lg-10 col-sm-10 col-xs-12">
+                                                <input type="text" id="contact-phone" class="form-control" placeholder="Telefon do osoby kontaktowej">
+
+                                                <i class="glyphicon glyphicon-asterisk"></i>
+
+                                                <span class="help-block">Musisz podać telefon kontaktowy</span>
+                                                <span class="help-block">Podaj numer telefonu w formacie: XX XXX XX XX</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="contact-email" class="col-lg-2 col-sm-2 col-xs-12 control-label required">E-mail</label>
+
+                                            <div class="col-lg-10 col-sm-10 col-xs-12">
+                                                <input type="email" id="contact-email" class="form-control" placeholder="e-mail do osoby kontaktowej">
+
+                                                <i class="glyphicon glyphicon-asterisk"></i>
+
+                                                <span class="help-block">Adres e-mail jest wymagany</span>
+                                                <span class="help-block">Podałeś niepoprawny adres e-mail</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="account-manager" class="col-lg-2 col-sm-2 col-xs-12 control-label required">Opiekun klienta</label>
+
+                                            <div class="col-lg-10 col-sm-10 col-xs-12">
+                                                <select id="account-manager" class="form-control">
+                                                    <option value=""></option>
+                                                </select>
+
+                                                <i class="glyphicon glyphicon-asterisk"></i>
+
+                                                <span class="help-block">Musisz wybrać opiekuna klienta</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="company-sector" class="col-lg-2 col-sm-2 col-xs-12 control-label required">Branża</label>
+
+                                            <div class="col-lg-10 col-sm-10 col-xs-12">
+                                                <select id="company-sector" class="form-control">
+                                                    <option value=""></option>
+                                                </select>
+
+                                                <i class="glyphicon glyphicon-asterisk"></i>
+
+                                                <span class="help-block">Musisz wybrać branżę</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="notes" class="col-lg-2 col-sm-2 col-xs-12 control-label required">Notatki</label>
+
+                                            <div class="col-lg-10 col-sm-10 col-xs-12">
+                                                <textarea id="notes" class="form-control" placeholder="Dodatkowe informacje o kliencie"></textarea>
+
+                                                <span class="help-block">Notatka nie może mieć więcej niż 500 znaków</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-lg-10 col-sm-10 col-xs-12 col-lg-offset-2 col-sm-offset-2">
+                                                <button class="btn btn-primary">Zapisz</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-lg-6">
+                            <div class="flat-panel">
+                                <div class="flat-panel-header">
+                                    <h3 class="flat-panel-heading">Dodaj nowe wydarzenie na osi czasu</h3>
+                                </div>
+                                <div class="flat-panel-body">
+
+                                    <form class="form-horizontal">
+                                        <div class="alert alert-success">
+                                            <strong>Sukces!</strong> Nowe wydarzenie zostało dodane do osi czasu!
+                                        </div>
+
+                                        <div class="alert alert-warning">
+                                            <strong>Uwaga!</strong> Popraw błędy formularza!
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="contact-user" class="col-lg-2 col-sm-2 col-xs-12 control-label">Kto się kontaktował</label>
+
+                                            <div class="col-lg-10 col-sm-10 col-xs-12">
+                                                <select id="contact-user" class="form-control">
+                                                    <option value=""></option>
+                                                </select>
+
+                                                <i class="glyphicon glyphicon-asterisk"></i>
+
+                                                <span class="help-block">Wybierz osobę, która się kontaktowała</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="contact-type" class="col-lg-2 col-sm-2 col-xs-12 control-label">Typ kontaktu</label>
+
+                                            <div class="col-lg-10 col-sm-10 col-xs-12">
+                                                <select id="contact-type" class="form-control">
+                                                    <option value=""></option>
+                                                </select>
+
+                                                <i class="glyphicon glyphicon-asterisk"></i>
+
+                                                <span class="help-block">Musisz wybrać typ kontaktu</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="contact-date" class="col-lg-2 col-sm-2 col-xs-12 control-label required">Data kontaktu</label>
+
+                                            <div class="col-lg-10 col-sm-10 col-xs-12">
+                                                <input type="text" id="contact-date" class="form-control" placeholder="rrrr-mm-dd hh:mm:ss">
+
+                                                <i class="glyphicon glyphicon-asterisk"></i>
+
+                                                <span class="help-block">Podaj danę kontaktu</span>
+                                                <span class="help-block">Data musi być w formacie rrrr-mm-dd hh:mm:ss</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="event-notes" class="col-lg-2 col-sm-2 col-xs-12 control-label required">Notatki</label>
+
+                                            <div class="col-lg-10 col-sm-10 col-xs-12">
+                                                <textarea id="event-notes" class="form-control" placeholder="np. ustalenia, potrzeby, kryteria decyzyjne"></textarea>
+
+                                                <i class="glyphicon glyphicon-asterisk"></i>
+
+                                                <span class="help-block">Notatka jest wymagana</span>
+                                                <span class="help-block">Notatka nie może mieć więcej niż 500 znaków</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-lg-10 col-sm-10 col-xs-12 col-lg-offset-2 col-sm-offset-2">
+                                                <button class="btn btn-primary">Dodaj wydarzenie</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <p class="emtpy-timeline">Jeszcze nikt nie kontaktował się z tym klientem</p>
+
+                            <ul class="timeline">
+                                <li>
+                                    <i class="fa fa-file-text-o red"></i>
+                                    <span class="date">20-sty</span>
+
+                                    <div class="content">
+                                        <p>
+                                            <strong>Konstantyn Kowalski</strong> - podpisanie umowy z klientem dnia 20 stycznia 2015 o 12:00
+                                        </p>
+
+                                        <blockquote>
+                                            <p>Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies.</p>
+                                        </blockquote>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa fa-users purple"></i>
+                                    <span class="date">16-sty</span>
+
+                                    <div class="content">
+                                        <p>
+                                            <strong>Łukasz Pawłowski</strong> - spotkanie z kilentem dnia 16 stycznia 2015 o 15:00
+                                        </p>
+
+                                        <blockquote>
+                                            <p>Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non, consectetuer lobortis quis, varius in, purus.</p>
+                                        </blockquote>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone blue"></i>
+                                    <span class="date">16-sty</span>
+
+                                    <div class="content">
+                                        <p>
+                                            <strong>Zofia Jabłońska</strong> - telefon do klienta dnia 16 stycznia 2015 o 13:15
+                                        </p>
+
+                                        <blockquote>
+                                            <p>Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu.</p>
+                                        </blockquote>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope-o green"></i>
+                                    <span class="date">14-sty</span>
+
+                                    <div class="content">
+                                        <p>
+                                            <strong>Łukasz Pawłowski</strong> - wysyłka maila do klienta dnia 14 stycznia 2015 o 18:30
+                                        </p>
+
+                                        <blockquote>
+                                            <p>Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac.</p>
+                                        </blockquote>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone blue"></i>
+                                    <span class="date">12-sty</span>
+
+                                    <div class="content">
+                                        <p>
+                                            <strong>Konstantyn Kowalski</strong> - telefon do klienta dnia 12 stycznia 2015 o 12:00
+                                        </p>
+
+                                        <blockquote>
+                                            <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.</p>
+                                        </blockquote>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /content -->
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/jquery.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/main.js"></script>
+    </body>
+</html>

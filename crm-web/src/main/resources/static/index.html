@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl" ng-app="crmApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>AngularJS CRM</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,400&subset=latin-ext' rel='stylesheet'
+          type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,200,100' rel='stylesheet' type='text/css'>
+
+    <link href="app/css/bootstrap.min.css" rel="stylesheet">
+    <link href="app/css/font-awesome.min.css" rel="stylesheet">
+    <link href="app/css/main.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div id="outer-wrapper">
+    <div id="sidebar">
+        <div class="semifluid-layout">
+            <div class="btn-rwd-menu">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="sidebar-logo">
+                <a href="#">Super-CRM</a>
+            </div>
+            <nav class="sidebar-navigation">
+                <ul>
+                    <li class="active">
+                        <a href="/#/clients">
+                            <i class="fa fa-users"></i>
+                            <span>Clients</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/#/sectors">
+                            <i class="fa fa-database"></i>
+                            <span>Company sectors</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/#/users">
+                            <i class="fa fa-cogs"></i>
+                            <span>Users</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="main-header navbar navbar-default">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-xs-6 user-area">
+                        <ul class="nav navbar-nav navbar-right user-nav">
+                            <li class="profile_menu ">
+                                <a href="#">
+                                    <img src="app/img/user-avatar.jpg" alt="John black">
+                                    <span>John Black</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content container-fluid">
+            <div class="row">
+                <div class="breadcrumb">
+                    <ul>
+                        <li class="active">
+                            <span>Clients list</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- content -->
+            <div ng-view></div>
+            <!-- /content -->
+
+        </div>
+
+    </div>
+</div>
+
+<script src="app/js/jquery.js"></script>
+<script src="app/js/bootstrap.min.js"></script>
+<script src="app/js/main.js"></script>
+<script src="app/js/angular.min.js"></script>
+<script src="app/js/angular-route.min.js"></script>
+<script src="app/js/angular-locale_pl-pl.js"></script>
+<script src="app/js/angular-messages.min.js"></script>
+<script src="app/js/services.js"></script>
+<script src="app/js/app.js"></script>
+
+</body>
+</html>
