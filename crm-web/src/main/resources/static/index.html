@@ -11,9 +11,9 @@
           type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:300,200,100' rel='stylesheet' type='text/css'>
 
-    <link href="app/css/bootstrap.min.css" rel="stylesheet">
-    <link href="app/css/font-awesome.min.css" rel="stylesheet">
-    <link href="app/css/main.css" rel="stylesheet">
+    <link href="lib/bootstrap-css-only/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -66,7 +66,7 @@
                         <ul class="nav navbar-nav navbar-right user-nav">
                             <li class="profile_menu ">
                                 <a href="#">
-                                    <img src="app/img/user-avatar.jpg" alt="John black">
+                                    <img src="img/user-avatar.jpg" alt="John black">
                                     <span>John Black</span>
                                 </a>
                             </li>
@@ -87,24 +87,23 @@
                 </div>
             </div>
 
-            <!-- content -->
             <div ng-view></div>
-            <!-- /content -->
 
         </div>
 
     </div>
 </div>
 
-<script src="app/js/jquery.js"></script>
-<script src="app/js/bootstrap.min.js"></script>
-<script src="app/js/main.js"></script>
-<script src="app/js/angular.min.js"></script>
-<script src="app/js/angular-route.min.js"></script>
-<script src="app/js/angular-locale_pl-pl.js"></script>
-<script src="app/js/angular-messages.min.js"></script>
-<script src="app/js/services.js"></script>
-<script src="app/js/app.js"></script>
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/bootstrap-css-only/css/bootstrap.min.css"></script>
+<script src="lib/angular/angular.min.js"></script>
+<script src="lib/angular-route/angular-route.min.js"></script>
+<script src="lib/angular-i18n/angular-locale_pl-pl.js"></script>
+<script src="lib/angular-resource/angular-resource.min.js"></script>
+
+<script src="js/main.js"></script>
+<script src="js/services.js"></script>
+<script src="js/app.js"></script>
 
 </body>
 </html>

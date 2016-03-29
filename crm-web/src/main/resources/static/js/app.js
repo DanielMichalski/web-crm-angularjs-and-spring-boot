@@ -5,13 +5,13 @@
         $routeProvider
             .when('/clients', {
                 controller: 'ClientsListCtrl',
-                templateUrl: 'app/views/clients-list.html'
+                templateUrl: 'views/clients-list.html'
             })
             .when('/sectors', {
-                templateUrl: 'app/views/sectors-list.html'
+                templateUrl: 'views/sectors-list.html'
             })
             .when('/users', {
-                templateUrl: 'app/views/users-list.html'
+                templateUrl: 'views/users-list.html'
             })
             .otherwise({
                 redirectTo: '/clients'

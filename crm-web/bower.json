@@ -1,0 +1,13 @@
+{
+	"name": "web-crm-angularjs-and-spring-boot",
+	"dependencies": {
+		"angular": "~1.4.10",
+		"angular-messages": "~1.4.10",
+		"angular-route": "~1.4.10",
+		"angular-resource": "~1.4.10",
+		"angular-i18n": "~1.4.10",
+		"bootstrap-css-only": "~3.3.6",
+		"font-awesome": "~4.5.0",
+		"jquery": "~1.12.2"
+	}
+}
