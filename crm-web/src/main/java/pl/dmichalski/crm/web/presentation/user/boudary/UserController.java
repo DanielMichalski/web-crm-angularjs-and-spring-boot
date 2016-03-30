@@ -3,25 +3,25 @@ package pl.dmichalski.crm.web.presentation.user.boudary;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pl.dmichalski.crm.core.business.user.control.UserRepository;
-import pl.dmichalski.crm.core.business.user.entity.User;
+import pl.dmichalski.crm.web.presentation.user.control.UserPresentationService;
+import pl.dmichalski.crm.web.presentation.user.entity.UserDTO;
 
-import java.util.List;
+import java.util.Collection;
 
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
 
-    private UserRepository userRepository;
+    private UserPresentationService userPresentationService;
 
     @Autowired
-    public UserController(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public UserController(UserPresentationService userPresentationService) {
+        this.userPresentationService = userPresentationService;
     }
 
     @RequestMapping
-    public List<User> findAllUsers2() {
-        return userRepository.findAll();
+    public Collection<UserDTO> findAllUsers() {
+        return userPresentationService.findAll();
     }
 
 }

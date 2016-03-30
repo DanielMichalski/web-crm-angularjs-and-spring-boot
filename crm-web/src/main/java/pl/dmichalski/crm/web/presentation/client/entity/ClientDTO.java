@@ -31,7 +31,13 @@ public class ClientDTO {
 
     public static Builder create(ClientDTO copy) {
         Builder builder = new Builder();
-        builder.id = copy.id;
+        builder.contactName = copy.contactName;
+        builder.companyName = copy.companyName;
+        builder.contactPhone = copy.contactPhone;
+        builder.contactEmail = copy.contactEmail;
+        builder.userName = copy.userName;
+        builder.notes = copy.notes;
+        builder.companySectorName = copy.companySectorName;
         return builder;
     }
 

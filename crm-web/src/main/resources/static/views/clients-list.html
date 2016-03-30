@@ -14,7 +14,7 @@
                                        class="col-sm-3 col-xs-12 control-label">Company name</label>
 
                                 <div class="col-sm-9 col-xs-12">
-                                    <input id="filter-company-name" type="text" class="form-control"
+                                    <input id="filter-company-name" ng-model="filterBy.companyName" type="text" class="form-control"
                                            placeholder="Enter the company name">
                                 </div>
                             </div>
@@ -26,8 +26,9 @@
                                        class="col-sm-3 col-xs-12 control-label required">Company sector</label>
 
                                 <div class="col-sm-9 col-xs-12">
-                                    <select id="filter-sector" class="form-control">
+                                    <select id="filter-sector" ng-model="filterBy.companySectorName" class="form-control">
                                         <option value=""></option>
+                                        <option ng-repeat="sector in sectors" value="{{ sector.name }}">{{ sector.name }}</option>
                                     </select>
                                 </div>
                             </div>
@@ -40,8 +41,9 @@
                                 </label>
 
                                 <div class="col-sm-9 col-xs-12">
-                                    <select id="filter-manager" class="form-control">
+                                    <select id="filter-manager" ng-model="filterBy.userName" class="form-control">
                                         <option value=""></option>
+                                        <option ng-repeat="user in users" value="{{ user.name }}">{{ user.name }}</option>
                                     </select>
                                 </div>
                             </div>
@@ -97,7 +99,7 @@
                     </tr>
                     </thead>
                     <tbody class="no-border">
-                    <tr ng-repeat="client in clients | orderBy: orderByColumn : orderByDir">
+                    <tr ng-repeat="client in clients | filter: filterBy | orderBy: orderByColumn : orderByDir">
                         <td class="text-center">{{ client.id }}</td>
                         <td>{{ client.companyName }}</td>
                         <td class="hidden-xs">{{ client.companySectorName }}</td>

@@ -1,4 +1,4 @@
-package pl.dmichalski.crm.core.business.company.entity;
+package pl.dmichalski.crm.core.business.company_sectors.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

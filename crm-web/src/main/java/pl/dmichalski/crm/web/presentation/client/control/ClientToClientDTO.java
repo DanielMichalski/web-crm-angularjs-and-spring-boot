@@ -6,7 +6,7 @@ import pl.dmichalski.crm.web.conversion.EntityToDTO;
 import pl.dmichalski.crm.web.presentation.client.entity.ClientDTO;
 
 @Component
-public class ClientToClientDTO implements EntityToDTO<Client, ClientDTO>{
+class ClientToClientDTO implements EntityToDTO<Client, ClientDTO>{
 
     @Override
     public ClientDTO convert(Client client) {

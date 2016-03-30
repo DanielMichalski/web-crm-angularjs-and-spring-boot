@@ -1,6 +1,6 @@
 package pl.dmichalski.crm.core.business.client.entity;
 
-import pl.dmichalski.crm.core.business.company.entity.CompanySector;
+import pl.dmichalski.crm.core.business.company_sectors.entity.CompanySector;
 import pl.dmichalski.crm.core.business.user.entity.User;
 
 import javax.persistence.*;
