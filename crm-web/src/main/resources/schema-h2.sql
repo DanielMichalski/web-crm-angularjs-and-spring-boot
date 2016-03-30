@@ -1,8 +1,10 @@
+DROP ALL OBJECTS;
+
 ----------------------------------------------------------------------
 -- users
 ----------------------------------------------------------------------
 
-CREATE TABLE IF NOT EXISTS users (
+CREATE TABLE users (
   id   INT          NOT NULL PRIMARY KEY AUTO_INCREMENT,
   name VARCHAR(255) NOT NULL
 );
@@ -12,7 +14,7 @@ CREATE TABLE IF NOT EXISTS users (
 -- company_sectors
 ----------------------------------------------------------------------
 
-CREATE TABLE IF NOT EXISTS company_sectors (
+CREATE TABLE company_sectors (
   id   INT          NOT NULL PRIMARY KEY AUTO_INCREMENT,
   name VARCHAR(255) NOT NULL
 );
@@ -21,7 +23,7 @@ CREATE TABLE IF NOT EXISTS company_sectors (
 -- clients
 ----------------------------------------------------------------------
 
-CREATE TABLE IF NOT EXISTS clients (
+CREATE TABLE clients (
   id                 INT          NOT NULL PRIMARY KEY AUTO_INCREMENT,
   company_name       VARCHAR(100) NOT NULL,
   contact_name       VARCHAR(50)  NOT NULL,
@@ -39,7 +41,7 @@ CREATE TABLE IF NOT EXISTS clients (
 -- contact_timeline
 ----------------------------------------------------------------------
 
-CREATE TABLE IF NOT EXISTS contact_timeline (
+CREATE TABLE contact_timeline (
   id           INT          NOT NULL PRIMARY KEY AUTO_INCREMENT,
   client_id    INT          NOT NULL,
   user_id      INT          NOT NULL,
